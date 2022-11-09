@@ -1,0 +1,14 @@
+﻿@page
+@model PROJEKT.Pages.Admin.AdminareaModel
+@{
+    ViewData["Title"] = "adminarea";
+}
+
+<h1>Admin Page</h1>
+<h2>Welcome @User.Identity.Name</h2>
+<ul>
+    @foreach (var c in User.Claims)
+    {
+        <li>@c.Type: @c.Value</li>
+    }
+</ul>
